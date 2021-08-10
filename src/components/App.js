@@ -10,7 +10,7 @@ class Para extends Component {
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.state = 0;
+		this.state = {count: 0};
 	};
 
 	render() {
@@ -18,7 +18,7 @@ class App extends Component {
 			<div id="main">
 				{ /* Do not remove this main div!! */}
 				<button id="click" onClick={ () => {
-					this.setState(this.state + 1);
+					this.setState({count: this.state.count + 1});
 					return <Para/>
 				}} >Render Paragraph</button>
 			</div>
