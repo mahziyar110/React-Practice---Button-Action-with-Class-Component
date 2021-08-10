@@ -10,6 +10,7 @@ class Para extends Component {
 class App extends Component {
 	constructor(props) {
 		super(props);
+		this.state = 0;
 	};
 
 	render() {
@@ -17,6 +18,7 @@ class App extends Component {
 			<div id="main">
 				{ /* Do not remove this main div!! */}
 				<button id="click" onClick={function () {
+					this.state = this.state + 1;
 					return <Para/>
 				}} >Render Paragraph</button>
 			</div>
