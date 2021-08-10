@@ -5,7 +5,7 @@ import '../styles/App.css';
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { count: 0 };
+		this.state = { show: false };
 	};
 
 	render() {
@@ -13,10 +13,10 @@ class App extends Component {
 			<div id="main">
 				{ /* Do not remove this main div!! */}
 				<button id="click" onClick={() => {
-					this.setState({ count: this.state.count + 1 });
-					return <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>
+					this.setState({ show: true });
 				}} >Render Paragraph</button>
-			</div>
+				{this.state.show && <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
+				</div>
 		);
 	}
 }
